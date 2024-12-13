@@ -17,9 +17,9 @@ package com.github.swagger.akka.samples
 
 import io.swagger.annotations._
 import javax.ws.rs.Path
-import akka.http.scaladsl.server.Directives
-import akka.stream.ActorMaterializer
-import akka.actor.ActorSystem
+import org.apache.pekko.http.scaladsl.server.Directives
+import org.apache.pekko.stream.ActorMaterializer
+import org.apache.pekko.actor.ActorSystem
 
 @Api(value = "/pet", description = "Operations about pets.", produces = "application/json, application/vnd.test.pet", consumes = "application/json, application/vnd.test.pet")
 @Path("/pet")

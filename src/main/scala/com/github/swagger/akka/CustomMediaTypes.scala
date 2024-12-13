@@ -13,8 +13,8 @@
  */
 package com.github.swagger.akka
 
-import akka.http.scaladsl.model.MediaType
-import akka.http.scaladsl.model.HttpCharsets.`UTF-8`
+import org.apache.pekko.http.scaladsl.model.MediaType
+import org.apache.pekko.http.scaladsl.model.HttpCharsets.`UTF-8`
 
 object CustomMediaTypes {
 

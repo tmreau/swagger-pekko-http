@@ -1,14 +1,15 @@
-organization := "com.github.swagger-akka-http"
+organization := "org.make"
 
-name := "swagger-akka-http"
+name := "swagger-pekko-http"
 
 val swaggerVersion = "1.6.3"
-val akkaVersion = "2.6.16"
-val akkaHttpVersion = "10.2.6"
-val jacksonVersion = "2.13.0"
-val slf4jVersion = "1.7.32"
-val scala213 = "2.13.6"
+val pekkoVersion = "1.1.2"
+val pekkoHttpVersion = "1.1.0"
+val jacksonVersion = "2.18.2"
+val slf4jVersion = "2.0.16"
+val scala213 = "2.13.14"
 
+version := "1.6.0"
 ThisBuild / scalaVersion := scala213
 ThisBuild / crossScalaVersions := Seq(scala213, "2.12.15")
 
@@ -17,11 +18,11 @@ update / checksums := Nil
 //resolvers += Resolver.sonatypeRepo("snapshots")
 
 libraryDependencies ++= Seq(
-  "com.typesafe.akka" %% "akka-stream" % akkaVersion,
-  "com.typesafe.akka" %% "akka-testkit" % akkaVersion % Test,
-  "com.typesafe.akka" %% "akka-http" % akkaHttpVersion,
-  "com.typesafe.akka" %% "akka-http-spray-json" % akkaHttpVersion % "test",
-  "com.typesafe.akka" %% "akka-http-testkit" % akkaHttpVersion % "test",
+  "org.apache.pekko" %% "pekko-stream" % pekkoVersion,
+  "org.apache.pekko" %% "pekko-testkit" % pekkoVersion % Test,
+  "org.apache.pekko" %% "pekko-http" % pekkoHttpVersion,
+  "org.apache.pekko" %% "pekko-http-spray-json" % pekkoHttpVersion % "test",
+  "org.apache.pekko" %% "pekko-http-testkit" % pekkoHttpVersion % "test",
   "io.swagger" % "swagger-core" % swaggerVersion,
   "io.swagger" % "swagger-annotations" % swaggerVersion,
   "io.swagger" % "swagger-models" % swaggerVersion,
@@ -52,7 +53,7 @@ Test / testOptions += Tests.Argument("-oD")
 Test / parallelExecution := false
 logBuffered := false
 
-Test / publishArtifact  := false
+Test / publishArtifact := false
 
 pomIncludeRepository := { _ => false }
 

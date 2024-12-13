@@ -7,8 +7,8 @@ import org.scalatest.{BeforeAndAfterAll, Matchers, WordSpec}
 import org.yaml.snakeyaml.Yaml
 import com.github.swagger.akka.model._
 import com.github.swagger.akka.samples._
-import akka.http.scaladsl.model.ContentTypes
-import akka.http.scaladsl.testkit.ScalatestRouteTest
+import org.apache.pekko.http.scaladsl.model.ContentTypes
+import org.apache.pekko.http.scaladsl.testkit.ScalatestRouteTest
 
 class MinimalSwaggerHttpServiceSpec
     extends WordSpec with Matchers with BeforeAndAfterAll with ScalatestRouteTest {

@@ -13,8 +13,8 @@
  */
 package com.github.swagger.akka
 
-import akka.http.scaladsl.model.{HttpEntity, MediaTypes}
-import akka.http.scaladsl.server.{Directives, PathMatchers, Route}
+import org.apache.pekko.http.scaladsl.model.{HttpEntity, MediaTypes}
+import org.apache.pekko.http.scaladsl.server.{Directives, PathMatchers, Route}
 import com.github.swagger.akka.model.{Info, mapAsScala, scala2swagger}
 import io.swagger.jaxrs.Reader
 import io.swagger.jaxrs.config.DefaultReaderConfig

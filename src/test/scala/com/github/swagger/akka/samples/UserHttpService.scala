@@ -17,9 +17,9 @@ package com.github.swagger.akka.samples
 
 import javax.ws.rs.Path
 
-import akka.actor.ActorSystem
-import akka.http.scaladsl.server.Directives
-import akka.stream.ActorMaterializer
+import org.apache.pekko.actor.ActorSystem
+import org.apache.pekko.http.scaladsl.server.Directives
+import org.apache.pekko.stream.ActorMaterializer
 import io.swagger.annotations.SwaggerDefinition.Scheme
 import io.swagger.annotations._
 
